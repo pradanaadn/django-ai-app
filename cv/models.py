@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class Cv(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    file = models.FileField(upload_to='cv')
+    file = models.FileField(upload_to='static/media/cv_upload')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
